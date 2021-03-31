@@ -52,7 +52,7 @@ def download(SRR_Name, working_path, tool_kit_path, paired_bool, singel_bool, th
 
 	# prefetch
 	print("Downloading " + SRR_Name)
-	subprocess.call(["prefetch", "--max-size", "60000000", SRR_Name])
+	subprocess.call(["prefetch", "--max_size", "60000000", SRR_Name])
 
 	os.mkdir(SRR_Name)
 	os.chdir(SRR_Name)

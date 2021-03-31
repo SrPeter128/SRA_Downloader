@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# TEST
-=======
-# SRA_Downloader
-
-
 Automated download of NextSeq datasets. Simply submit a .txt with SRR or SRA numbers (or similar). The numbers must be line separated.
 
 ```
@@ -19,4 +13,3 @@ Options:
   -k SRA_TOOLKIT_PATH, --SRA_toolkit_path=SRA_TOOLKIT_PATH
                         Path to the  ncbi/sra directory from the sra-toolkit
 ```
->>>>>>> 8f63a014ed4f4ff1a08f685188e9a83ae0902114

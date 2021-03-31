@@ -63,20 +63,20 @@ def download(SRR_Name, working_path, tool_kit_path, paired_bool, singel_bool, th
 
 	if threads == 0:
 		# Fastq-dump
-		if (paired_bool == True):
+		if (paired_bool):
 			subprocess.call(["fastq-dump", "--gzip", "--split-files", SRR_File])
 			print(SRR_File, "processed and ziped and splided as paird-end\n\n")
 
-		elif (singel_bool == True):
+		elif (singel_bool):
 			subprocess.call(["fastq-dump", "--gzip", SRR_File])
 			print(SRR_File, "processed and ziped as single-end\n\n")
 	elif threads != 0:
-		if (paired_bool == True):
+		if (paired_bool):
 			subprocess.call(
 				["parallel-fastq-dump", "--sra-id", SRR_File, "--threads", threads, "--split-files", "--gzip"])
 			print(SRR_File, "processed and ziped and splided as paird-end\n\n")
 
-		elif (singel_bool == True):
+		elif (singel_bool):
 			subprocess.call(["parallel-fastq-dump", "--sra-id", SRR_File, "--threads", threads, "--gzip"])
 			print(SRR_File, "processed and ziped as single-end\n\n")
 
